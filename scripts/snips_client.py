@@ -8,6 +8,7 @@ def on_connect(client, userdata, flags, rc):
 
     client.subscribe("hermes/hotword/default/detected")
     client.subscribe("hermes/asr/textCaptured")
+    client.subscribe('hermes/intent/#')
 
 def on_message(client, userdata, msg):
     print("Message received on topic {0}: {1}"\
